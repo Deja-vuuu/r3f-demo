@@ -1,0 +1,26 @@
+/* 引入字体 */
+@font-face {
+  font-family: "BaoTuXiaoBaiTi";
+  src: url("/BaoTuXiaoBaiTi-2.ttf") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
+  background-image: linear-gradient(90deg, #ccc 2.5%, transparent 0),
+    linear-gradient(#ccc 2.5%, transparent 0);
+  background-size: 30px 30px;
+  background-repeat: repeat;
+  /* font-family: "BaoTuXiaoBaiTi"; */
+}
