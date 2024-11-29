@@ -4,6 +4,10 @@ import Home from "./pages/home"
 import Light from "./pages/light"
 import Shadow from "./pages/shadow"
 import Hooks from "./pages/hooks"
+import Controls from "./pages/controls"
+import ThreeModels from "./pages/3DModels"
+
+
 
 const router = createBrowserRouter([
   {
@@ -22,10 +26,14 @@ const router = createBrowserRouter([
     path: "/hooks",
     element: <Hooks />,
   },
-  //   {
-  //     path: "about",
-  //     element: <div>About</div>,
-  //   },
+  {
+    path: "/controls",
+    element: <Controls/>,
+  },
+  {
+    path: "/models",
+    element: <ThreeModels/>,
+  },
 ])
 
 export default router
