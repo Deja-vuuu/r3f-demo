@@ -23,10 +23,8 @@ function App() {
     })
     console.log(position)
 
-
-
     return (
-        <>
+        <div>
             <Canvas>
                 {/* <OrthographicCamera position={position} makeDefault fov={50} /> */}
                 <mesh position-x={-0.6}>
@@ -62,7 +60,7 @@ function App() {
                 />
                 <Stats />
             </Canvas>
-        </>
+        </div>
     )
 }
 

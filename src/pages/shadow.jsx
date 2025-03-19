@@ -15,7 +15,7 @@ function App() {
                     scale={5}
                     position={[0, -0.499, 0]}
                     color="#EFBD4E"
-                    
+
                 >
                     <RandomizedLight
                         amount={4}
@@ -43,20 +43,22 @@ function App() {
 
                 // default
                 />
+                <group>
+                    <mesh position={[1, 1, 1]} castShadow>
+                        <sphereGeometry args={[0.5, 32, 32]} />
+                        <meshStandardMaterial color="white" />
+                    </mesh>
+                    <mesh rotation-y={Math.PI / 4} castShadow receiveShadow>
+                        <boxGeometry />
+                        <meshStandardMaterial color="white" />
+                    </mesh>
 
-                <mesh position={[1, 1, 1]} castShadow>
-                    <sphereGeometry args={[0.5, 32, 32]} />
-                    <meshStandardMaterial color="white" />
-                </mesh>
-                <mesh rotation-y={Math.PI / 4} castShadow receiveShadow>
-                    <boxGeometry />
-                    <meshStandardMaterial color="white" />
-                </mesh>
+                    <mesh rotation-x={-Math.PI / 2} position-y={-0.5} receiveShadow>
+                        <planeGeometry args={[5, 5]} />
+                        <meshStandardMaterial color="white" />
+                    </mesh>
+                </group>
 
-                <mesh rotation-x={-Math.PI / 2} position-y={-0.5} receiveShadow>
-                    <planeGeometry args={[5, 5]} />
-                    <meshStandardMaterial color="white" />
-                </mesh>
 
                 <group position-x={10}>
                     <mesh position={[1, 1, 1]} castShadow>

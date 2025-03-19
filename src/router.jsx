@@ -1,38 +1,85 @@
 import { createBrowserRouter } from "react-router-dom"
+import { lazy, Suspense } from 'react'
 
-import Home from "./pages/home"
-import Light from "./pages/light"
-import Shadow from "./pages/shadow"
-import Hooks from "./pages/hooks"
-import Controls from "./pages/controls"
-import ThreeModels from "./pages/3DModels"
+// 懒加载所有页面组件
+const Home = lazy(() => import("./pages/home"))
+const Light = lazy(() => import("./pages/light"))
+const Shadow = lazy(() => import("./pages/shadow"))
+const Hooks = lazy(() => import("./pages/hooks"))
+const Controls = lazy(() => import("./pages/controls"))
+const ThreeModels = lazy(() => import("./pages/models"))
+const Textures = lazy(() => import("./pages/textures"))
+const Html = lazy(() => import("./pages/html"))
+const Text = lazy(() => import("./pages/text"))
+const Animation = lazy(() => import("./pages/animations"))
+const Physics = lazy(() => import("./pages/physics"))
 
+// 加载状态组件
+const LoadingFallback = () => (
+  <div style={{
+    width: '100%',
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '20px',
+    color: '#666'
+  }}>
+    Loading...
+  </div>
+)
 
+// 包装组件以添加 Suspense
+const withSuspense = (Component) => (
+  <Suspense fallback={<LoadingFallback />}>
+    <Component />
+  </Suspense>
+)
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
-  },
-  {
     path: "/light",
-    element: <Light />,
+    element: withSuspense(Light),
   },
   {
     path: "/shadow",
-    element: <Shadow />,
+    element: withSuspense(Shadow),
   },
   {
     path: "/hooks",
-    element: <Hooks />,
+    element: withSuspense(Hooks),
   },
   {
     path: "/controls",
-    element: <Controls/>,
+    element: withSuspense(Controls),
   },
   {
     path: "/models",
-    element: <ThreeModels/>,
+    element: withSuspense(ThreeModels),
+  },
+  {
+    path: "/textures",
+    element: withSuspense(Textures),
+  },
+  {
+    path: "/html",
+    element: withSuspense(Html),
+  },
+  {
+    path: "/animations",
+    element: withSuspense(Animation),
+  },
+  {
+    path: "/text",
+    element: withSuspense(Text),
+  },
+  {
+    path: "/physics",
+    element: withSuspense(Physics),
+  },
+  {
+    path: "/",
+    element: withSuspense(Home),
   },
 ])
 
