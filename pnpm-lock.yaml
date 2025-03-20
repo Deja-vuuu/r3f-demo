@@ -15,14 +15,14 @@ importers:
         specifier: ^9.7.5
         version: 9.7.5(@react-three/fiber@8.17.14(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1))(react@18.3.1)(three@0.167.1)
       '@react-three/drei':
-        specifier: ^9.121.4
+        specifier: ^9.74.15
         version: 9.121.4(@react-three/fiber@8.17.14(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1))(@types/react@18.3.18)(@types/three@0.167.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1)(use-sync-external-store@1.4.0(react@18.3.1))
       '@react-three/fiber':
-        specifier: ^8.16.8
+        specifier: ^8.13.0
         version: 8.17.14(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1)
       '@react-three/rapier':
-        specifier: ^2.0.0
-        version: 2.0.0(@react-three/fiber@8.17.14(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1))(react@18.3.1)(three@0.167.1)
+        specifier: ^1.1.2
+        version: 1.5.0(@react-three/fiber@8.17.14(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1))(react@18.3.1)(three@0.167.1)
       '@types/three':
         specifier: ^0.167.1
         version: 0.167.2
@@ -39,10 +39,10 @@ importers:
         specifier: ^0.9.35
         version: 0.9.36(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
-        specifier: ^18.3.1
+        specifier: ^18.2.0
         version: 18.3.1
       react-dom:
-        specifier: ^18.3.1
+        specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
       react-router-dom:
         specifier: ^6.26.0
@@ -591,12 +591,12 @@ packages:
       react-native:
         optional: true
 
-  '@react-three/rapier@2.0.0':
-    resolution: {integrity: sha512-nlKBfSUKaBUFBGJdCTqp8LzgJIpuZ1BJMzx19w8qlQLxhNOTz41Ldg6+qcBILaAzDUygnmdhyhCl3tTKybMqIw==}
+  '@react-three/rapier@1.5.0':
+    resolution: {integrity: sha512-gylk2KyCer9EoymFyTyc+g2IqyAq4mTbZgaHoSJi6gHoXlJsC2LVeN4jedvegvjUsXPExdE60wHjCPa+DS4iXw==}
     peerDependencies:
-      '@react-three/fiber': ^9.0.4
-      react: ^19
-      three: '>=0.159.0'
+      '@react-three/fiber': '>=8.9.0'
+      react: '>=18.0.0'
+      three: '>=0.139.0'
 
   '@remix-run/router@1.22.0':
     resolution: {integrity: sha512-MBOl8MeOzpK0HQQQshKB7pABXbmyHizdTpqnrIseTbsv0nAepwC2ENZa1aaBExNQcpLoXmWthhak8SABLzvGPw==}
@@ -2540,7 +2540,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@react-three/rapier@2.0.0(@react-three/fiber@8.17.14(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1))(react@18.3.1)(three@0.167.1)':
+  '@react-three/rapier@1.5.0(@react-three/fiber@8.17.14(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1))(react@18.3.1)(three@0.167.1)':
     dependencies:
       '@dimforge/rapier3d-compat': 0.14.0
       '@react-three/fiber': 8.17.14(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.167.1)

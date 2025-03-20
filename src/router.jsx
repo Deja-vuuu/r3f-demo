@@ -13,6 +13,7 @@ const Html = lazy(() => import("./pages/html"))
 const Text = lazy(() => import("./pages/text"))
 const Animation = lazy(() => import("./pages/animations"))
 const Physics = lazy(() => import("./pages/physics"))
+const Test = lazy(() => import("./pages/test"))
 
 // 加载状态组件
 const LoadingFallback = () => (
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
   {
     path: "/physics",
     element: withSuspense(Physics),
+  },
+  {
+    path: "/test",
+    element: withSuspense(Test),
   },
   {
     path: "/",

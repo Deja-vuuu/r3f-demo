@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import { KeyboardControls } from "@react-three/drei";
 import { Experience } from "./components/Experience";
 import { Controls } from "./controls";
-
 const PhysicsPage = () => {
     const map = useMemo(
         () => [
@@ -15,6 +14,7 @@ const PhysicsPage = () => {
             { name: Controls.jump, keys: ["Space"] },
         ],
         []
+
     );
     return (
 
