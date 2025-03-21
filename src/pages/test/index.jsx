@@ -37,6 +37,3 @@ function App() {
 export default App;
 
 
-// "@react-three/drei": "^9.74.15",
-// "@react-three/fiber": "^8.13.0",
-// "@react-three/rapier": "^1.1.2",
